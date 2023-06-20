@@ -1,0 +1,169 @@
+body {
+    background-image: url("formerly-gradienta.jpg");
+    background-size: cover;
+    background-attachment: fixed; /* Add this line to fix the background image while scrolling */
+    overflow-y: auto; /* Add this line to enable vertical scrolling, Set to "auto" instead of "scroll"  */
+    min-height: 100vh; /* Set the height of the body to 100% viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligns content vertically */
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper{
+    flex: 1; /* Fill the available vertical space */
+    height: auto; /* Set the desired height for the scrollable area */
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.topnav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    border: 1px solid #ffffff;
+    margin: 0 5px;
+}
+
+.topnav a:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.dropdown {
+position: relative;
+top: -50px; /* Adjust this value to lift the dropdown menu */
+}
+/* Dropdown style settings */
+.dropdown-menu {
+    background-color: transparent;
+    border: none;
+    margin-top: 0; /* Adjust the margin-top to match the navigation bar */
+    padding: 10px;
+    position: absolute; /* Changes the positioning of the dropdown menu */
+    right: auto;
+    left: -100px; /* Adjust the left position to align with the dropdown icon */
+    top: auto; /* Positions the dropdown menu below the dropdown button */
+    right: 0;
+    z-index: 1; /* Ensures the dropdown menu appears above other content */
+    display: none; /* Hides the dropdown menu by default */
+    bottom: -120px;
+    transform: translate(0, 0); 
+}
+
+.dropdown-item {
+    color: #ffff; /* sets the font color to white */
+    text-align: center; /* Center-align the dropdown menu items */
+}
+
+/* Dropdown menu styles */
+.dropdown-toggle {
+    color: #ffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    right: auto;
+    left: -100px;
+    margin: 0 5px;
+    position: relative; /* Adds relative positioning to the dropdown button */
+    padding-right: 10px; /* Adds padding to the right of the dropdown button for the arrow */
+}
+.dropdown-toggle::before,
+.dropdown-toggle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background-color: #ffffff;
+    transform: translateY(-50%); 
+}
+.dropdown-item {
+    color: #ffff; /* sets the font color to white */
+    text-align: center; /* Center-align the dropdown menu items */
+}
+
+.dropdown-toggle:hover,
+.dropdown-menu.show {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.description {
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 50vh; /* Adjust the margin-top to position the description */
+    border-radius: 5px;
+    text-align: center;
+    max-width: 600px; /* Set a max-width for the description */
+}
+
+.description h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.left-image {
+    width: 100px; /* Adjust the width to your desired size */
+    mix-blend-mode: overlay; /* Apply the overlay blend mode */
+    position: absolute; /* Position the image */
+    top: 20px; /* Adjust the top position */
+    left: 20px; /* Adjust the left position */
+    z-index: -1; /* Send the image to the back */
+}
+
+ /* Added styles for the carousel */
+ #myCarousel {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
