@@ -11,7 +11,7 @@ body {
 
 .content {
     flex: 1;
-    display: flex;
+    display: flex; /*Element will expand and fill the available space within its container.*/
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -120,6 +120,10 @@ top: -50px; /* Adjust this value to lift the dropdown menu */
     display: block;
 }
 
+#projects-video-container {
+    display: none;
+  }
+
 .description {
     background-color: transparent;
     padding: 20px;
@@ -159,52 +163,11 @@ footer {
 }
 
  /* Added styles for the carousel */
-.carousel-container {
+ .carousel-container {
     max-width: 600px;
     margin: 0 auto;
-}
-
-.carousel-inner {
     position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-inner .item {
-    display: none;
-}
-
-.carousel-inner .item.active {
-    display: block;
-}
-
-.carousel-inner .item img {
-    height: auto;
-    width: 100%;
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-}
-
-.carousel-indicators li.active {
-    background-color: #333;
-}
+ }
 
 
   
