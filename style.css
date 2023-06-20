@@ -56,6 +56,7 @@ body {
 position: relative;
 top: -50px; /* Adjust this value to lift the dropdown menu */
 }
+
 /* Dropdown style settings */
 .dropdown-menu {
     background-color: transparent;
@@ -64,7 +65,7 @@ top: -50px; /* Adjust this value to lift the dropdown menu */
     padding: 10px;
     position: absolute; /* Changes the positioning of the dropdown menu */
     right: auto;
-    left: -100px; /* Adjust the left position to align with the dropdown icon */
+    left: -150px; /* Adjust the left position to align with the dropdown icon */
     top: auto; /* Positions the dropdown menu below the dropdown button */
     right: 0;
     z-index: 1; /* Ensures the dropdown menu appears above other content */
@@ -158,12 +159,52 @@ footer {
 }
 
  /* Added styles for the carousel */
- #myCarousel {
+.carousel-container {
     max-width: 600px;
     margin: 0 auto;
 }
 
-.carousel-inner img {
+.carousel-inner {
+    position: relative;
     width: 100%;
-    height: auto;
+    overflow: hidden;
 }
+
+.carousel-inner .item {
+    display: none;
+}
+
+.carousel-inner .item.active {
+    display: block;
+}
+
+.carousel-inner .item img {
+    height: auto;
+    width: 100%;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+}
+
+.carousel-indicators li.active {
+    background-color: #333;
+}
+
+
+  

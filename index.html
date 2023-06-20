@@ -7,6 +7,7 @@
     <title>My personal Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script>
+
         function toggleDropdown(event) {
             var dropdownMenu = document.getElementById("dropdownMenu");
             if (dropdownMenu.style.display === "block") {
@@ -15,7 +16,55 @@
                 dropdownMenu.style.display = "block";
             }
         }
+
+        // Carousel functions
+        var carousel = document.getElementById("myCarousel");
+        var carouselItems = carousel.querySelectorAll(".item");
+        var carouselIndicators = carousel.querySelectorAll(".carousel-indicators li");
+        var currentSlide = 0;
+
+        function showSlide(index) {
+          // Hide all slides
+          for (var i = 0; i < carouselItems.length; i++) {
+            carouselItems[i].classList.remove("active");
+          }
+
+          // Hide all indicators
+          for (var j = 0; j < carouselIndicators.length; j++) {
+            carouselIndicators[j].classList.remove("active");
+          }
+
+          // Show the selected slide and indicator
+          carouselItems[index].classList.add("active");
+          carouselIndicators[index].classList.add("active");
+        }
+
+        function nextSlide() {
+          currentSlide++;
+          if (currentSlide >= carouselItems.length) {
+            currentSlide = 0;
+          }
+          showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+          currentSlide--;
+          if (currentSlide < 0) {
+            currentSlide = carouselItems.length - 1;
+          }
+          showSlide(currentSlide);
+        }
+
+        // Event listeners for previous and next buttons
+        var prevButton = carousel.querySelector(".left.carousel-control");
+        var nextButton = carousel.querySelector(".right.carousel-control");
+        prevButton.addEventListener("click", prevSlide);
+        nextButton.addEventListener("click", nextSlide);
+
+        // Show the initial slide
+        showSlide(currentSlide);
     </script>
+
 </head>
 <body>
     <h1>Jefferson</h1>
@@ -45,43 +94,44 @@
         </div>
     </div> 
     
+    <!-- Adding a carousel-->
+    <div class="carousel-container">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-  
+    
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
             <img src="Laptop.jpg" alt="Chania">
             <div class="carousel-caption">
-              <h3>Los Angeles</h3>
-              <p>LA is always so much fun!</p>
+              <h3>Picture 1</h3>
+              <p>a Laptop!</p>
             </div>
           </div>
-  
+    
           <div class="item">
             <img src="lightblue.jpg" alt="Chicago">
             <div class="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
+              <h3>Picture 2</h3>
+              <p>a light blue color!</p>
             </div>
           </div>
-  
+    
           <div class="item">
             <img src="Bluedark.jpg" alt="New York">
             <div class="carousel-caption">
-              <h3>New York</h3>
-              <p>We love the Big Apple!</p>
+              <h3>Picture 3</h3>
+              <p>A blue color!</p>
             </div>
           </div>
         </div>
-  
+    
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left"></span>
@@ -91,20 +141,16 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div> 
-  
+      </div>
+    </div>
 
-    <div class="content">
-        <!-- Add more content here -->
-        
-        <!-- Layout for the description -->
-        <div class="description">
+    <!-- Layout for the description -->
+    <div class="description">
             <img src="portrait.jpg" alt="Your Image" class="left-image">
             <h2>Welcome to My Portfolio!</h2>
             <p>I am a passionate web developer with expertise in front-end technologies. I love creating visually appealing and user-friendly websites that deliver a great user experience. Explore my work and projects to get a glimpse of my skills and capabilities.</p>
         </div>
     </div>
-    
 
       <!-- Footer section -->
     <footer>
