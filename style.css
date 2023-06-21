@@ -168,5 +168,13 @@ footer {
     position: relative;
  }
 
+ .contact {
+    padding: 20px;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+
 
   
