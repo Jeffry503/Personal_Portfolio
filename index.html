@@ -105,12 +105,14 @@
             </button>
             <ul class="dropdown-menu" id="dropdownMenu">
                 <li><a class="dropdown-item" href="#">skills</a></li>
-                <li><a class="dropdown-item" href="#" onclick="toggleVideo()">Projects</a></li>
+                <li><a class="dropdown-item" href="#" onclick="toggleVideoContainer()">Projects</a></li>
                 <div class="dropdown-content">
                   <!-- Video Content -->
                   <div id="projects-video-container">
-                    <video width="560" height="315" controls>
+                    <video width="320" height="245" controls>
                       <source src="Project1.MP4" type="video/mp4">
+                      <source src="Project1.MP4" type="video/ogg">
+                      Your browser does not support the video tag.
                     </video>
                   </div>
                 </div>
